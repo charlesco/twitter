@@ -1,0 +1,40 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Ligue\Ligue1\static\Ligue1/style.css' %}" />
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Twitter vous donne ses cotes !</title>				
+    </head>
+
+    <body>
+    </body>
+</html>
+
+
+    <h1>Twitter vous donne ses cotes !</h1>
+    
+
+<p>	Bienvenue sur notre site ! Réalise dans le cadre d'un <em>projet de programmation à l'ENSAE</em>, il a pour but de vous guider dans vos paris sportifs ! Vous n'avez qu'a donner le nom de votre équipe, et nous nous occupons de vous dévoiler LA cote a suivre </p>
+
+ATTENTION : Addic aux jeux ? Appelez le 09.74.751313
+<p>En nous basant sur les flux ininterrompus d'informations que nous fournit Twitter chaque jour, nous avons degage des tendances sur les differents pronostiques des internautes. Vous preferez vous appuyer sur les conseils d'autrui pour vos paris ? Sur ce site, beneficer de l'avis de milliers de parieurs ! </p>
+
+
+
+<p>Veuillez selectionner ici les equipes a tester</p>
+
+<form action="/Ligue1/match/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Match" />
+</form>
+
+    
+
+   
+
+
